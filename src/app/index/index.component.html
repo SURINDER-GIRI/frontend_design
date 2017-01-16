@@ -1,0 +1,174 @@
+<div class="col s12 main_content"> 
+<md-sidenav-layout fullscreen style="background:#eee" >
+ <md-sidenav #sidenav class="sid_nav" mode="{{mod}}" opened="{{sid}}">
+  <md-nav-list style="padding:0px">
+       <md-list style="padding:0px">
+    <div class="admin_back col s12">
+  <h4 >  Admin Panel </h4>
+    </div>
+</md-list> 
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>dashboard</md-icon>
+            <span md-line>Dashboard</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>account_circle</md-icon>
+            <span md-line>Agents </span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a> 
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>card_travel</md-icon>
+            <span md-line>Tasks <span class="new badge">4</span></span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+        <a class="waves-effect "  md-list-item (click)="nav('rules')" >
+          <md-icon md-list-icon>gavels</md-icon>
+            <span md-line>Rules Defined </span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+          
+         
+         
+                
+  </md-nav-list>
+  </md-sidenav> 
+
+    <div layout="column" layout-fill style="display:flex;justify-content:space-around">
+    <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5"  class="background-color" style="position:fixed;top:0px;left:0px"  >
+    <button md-icon-button aria-label="Settings" md-ripple (click)="sidenav.toggle()" >
+    <md-icon class="icn">reorder</md-icon>
+    </button>
+     <span class="app-toolbar-filler"></span>
+     <div>
+    <button md-icon-button  flex layout="row" layoutt-align="end center" >
+    <md-icon  class="icn">work</md-icon>
+    </button>
+    <button md-icon-button  flex layout="row" layoutt-align="end center">
+    <md-icon  class="icn">add_alert</md-icon>
+    </button>
+     <button md-icon-button  flex layout="row" layoutt-align="end center" >
+    <md-icon class="icn">chat</md-icon><span style="background:#d00;color:#fff;margin-top:0px;padding:4px;border-radius:40%;">4</span>
+    </button> 
+    <button md-icon-button [md-menu-trigger-for]="menu" flex layout="row" layoutt-align="end center" >
+    <md-icon class="icn">more_vert</md-icon>
+    </button>
+    
+    </div>
+    <span flex></span>
+    <md-menu x-position="before"  #menu style="top:20px !important;">
+    <button md-menu-item *ngIf="path == '/userdetail' " >Login</button> 
+    <a routerLink="/chat" >
+    <button md-menu-item >Chat</button>
+    </a>
+    <button md-menu-item>Logout</button>
+    </md-menu>
+    </md-toolbar>
+    </div>
+<div class="row" style="margin-top:75px;">
+<md-card class="toping">
+  <div class="row">
+    <div class="col l4 m5 left">
+      <img src="../../assets/img/cap.png" height="40px" width="40px" alt="" style="margin-top:-25px;">
+        <span style="font-family: 'Pacifico', cursive; font-weight:bold;font-size:20px">  Hooka Royals</span>
+    </div>
+      <div class="col l4 m5 right sid_icn">
+        <span class="right" style="margin-left:6px !important;"><i class="fa fa-user-secret" aria-hidden="true"></i> Agents </span> &nbsp;
+        <span class="right"> &nbsp;
+          <i class="fa fa-home" aria-hidden="true"></i> Home / </span>
+      </div>
+  </div>
+</md-card>
+
+      <router-outlet name="agent"></router-outlet>
+      <router-outlet name="task"></router-outlet>
+        <router-outlet name="rules"></router-outlet>
+
+
+ 
+
+
+</div>     
+  </md-sidenav-layout>
+  <!-- SELECT PLANS MODAL -->
+  <div id="modal1" class="modal modal-fixed-footer">
+  <div class="col s12 background-color" style="padding:3px ;color:#fff">
+  <h5 class="text-center">
+    <i class="fa fa-file-text-o" aria-hidden="true"></i>  Assign Plans </h5>
+  </div>
+    <div class="modal-content " style="border-radius:0px;">
+   <b> <i class="fa fa-file-text" aria-hidden="true"></i>  Select A Plan For <span style="color:#a00"> SURINDER-GIRI </span></b>
+    <div class="input-field col s12" style="margin-top:10px;">
+    Select Plan A
+    <select>
+      <option value="" disabled selected>Choose your Plan</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+      </div>
+      <div class="input-field col s12">
+       Select Plan B
+    <select>
+      <option value="" disabled selected>Choose your Plan</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+  </div>
+
+  <div class="col s12 text-center">
+    <a class="waves-effect waves-light btn center btn-block btn-large" ><i class="fa fa-paper-plane" aria-hidden="true"></i>Submit</a>
+  </div>
+      </div>
+    <div class="modal-footer">
+      <a  class="modal-action modal-close waves-effect waves-green btn-flat  red darken-2" style="color:#fff">Close</a>
+    </div>
+  </div>
+
+
+<!-- EDIT RULES MODAL -->
+
+ <div id="modal2" class="modal">
+  <md-toolbar class="background-color " style="text-align:center !important;color:#fff">
+  <h5 style="width:100%;">
+      <i class="fa fa-anchor" aria-hidden="true"></i> &nbsp; Edit Rules</h5>
+      </md-toolbar>   
+    <div class="modal-content" style="box-shadow:none;border-radius:0px;border:none">
+         
+      <div class="row">
+         <div class="input-field col s12">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Rule Number</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Rule Type</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Plane Name</label>
+        </div>    
+       <div class="input-field col s12">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Amount</label>
+        </div>
+<div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Description</label>
+        </div>
+
+  <div class="col s12 text-center">
+    <a class="waves-effect waves-light btn"> <i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+  </div>
+     </div>
+  </div>
+  </div>
+
+
+</div>
+
+
+
+
+

@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/materialize-css/dist/css/materialize.css";
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+.select-wrapper span.caret{
+	display: none;
+}
+a:hover{
+	text-decoration: none !important;
+
+}
+/**********************...... 
+				Login & sign up form Css
+							******************.......... */
+.background_images {
+	background: url("assets/img/back2.png")  no-repeat;
+	height: 100%;
+	background-size:cover; 
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-bottom: 10%;
+}
+/* .background_images {
+	background: rgb(66,165,245);
+		height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-bottom: 10%;
+} */
+
+			/* form elements */
+.login_signup_button{	position: relative;right: -60px;	}
+.login_border_left_side{width: 4px; height: 45px;position: absolute;left: 0px;}
+.login_box {   
+	 animation: fade_up ease-in-out 1s 1;
+	 border-radius: 10px;
+}
+.signup_box{	
+	animation: fade_up ease-in-out 1s 1;
+	border-radius: 10px;
+	display: block;
+}
+.forget_password, .login_panel, .register_panel{
+	cursor: pointer;
+}
+.forgetpassword{
+	animation: fade_up ease-in-out 1s 1;
+	border-radius: 10px;
+	display: block;
+}
+@-webkit-keyframes move {
+    from { background-position: 0% 5%  }
+    to {  background-position:0% 187%  }
+}
+@keyframes fade_up {
+   0% { 
+   		opacity: 0; transform: scale(.5) 
+   	 }
+   50%{ opacity: 1;	transform: scale(1)}
+}
+
+/****************........
+		Responsive Elements 
+					******************/
+@media only screen and (min-width:300px) and (max-width: 640px) {
+   .h2_in_small_screen{
+   	font-size: 35px;
+   }
+}
+@media only screen and (min-width:400px) and (max-width: 768px) {
+	.background_images{
+		height: 140% !important;
+	}
+}
+
+

@@ -1,0 +1,229 @@
+.toping{
+  margin-top: -10px;
+  padding:5px;
+}
+.sid_icn{
+  margin-top: 5px;
+}
+@media screen and (min-width:250px) and (max-width:768px){
+  .rightooo{
+    margin-top: 10px;
+  }
+.toping{
+  margin-top: -25px
+}
+}   
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+
+.background-color{
+	background: #3f51b5;
+}
+
+.sid_nav{
+	
+	width: 240px;
+}
+.icn
+{
+	color:#fff;
+}
+
+.admin_back{
+	display: flex;
+	justify-content:center;
+	align-items:flex-end;
+	background: url("../assets/img/admin.jpg");
+	background-size: 100%;
+	color:#fff;
+	height: 140px;
+
+}
+.md-sidenav-container{
+	width: 100%;
+	animation: stretch ease-in-out 1s 1
+}
+@keyframes stretch {
+   0% { width: 0%;height:0%;  }
+   100%{ width: 100%;height:100%; }
+}
+.waves-effect .waves-brown .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(255, 85, 72, 1)!important;
+    }
+
+    .collection .collection-item.active{
+    	background: #fff !important;
+    	color: #444 !important;
+    }
+@media only screen and  (min-width: 480px) and  (max-width: 960px) {
+
+	.sid_nav{
+
+}
+
+}
+
+@media only screen and  (min-width: 240px) and  (max-width: 480px) {
+    .sid_nav{
+	
+	width:240px;
+}
+}
+
+
+
+md-backdrop.md-select-backdrop {
+    z-index:103;
+}
+
+.md-select-menu-container {
+    z-index:104;
+}
+
+
+.applied{
+  background: transparent;
+  color:#d32f2f !important;
+  border:1px solid #d32f2f;
+  border-radius: 5px;
+}
+
+
+
+
+.mainnnn{
+  padding: 0px;
+}
+
+
+.maindetail{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding:0px;
+}
+.leftoo{
+  padding:0;
+  border:1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(203, 203, 238, 0.2);
+}
+.custommm{
+  background: #eee;
+  text-align: center;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:15px;
+  font-weight: bold;
+}
+.ooorder{
+  color: #3b5998;
+  padding: 5px;
+  text-align: center;
+  transition:all 0.90s ease-out 0s;
+}
+.ooorder:hover{
+  color: #fff;
+  background:#3b5998; 
+}
+.myorderrr{
+	/*padding:10px 0px 10px 0px; */
+   font-weight: bold;
+   font-size: 30px;
+}
+.yoooppp{
+	font-size:22px;
+	padding:10px ; 
+}
+.iuhaq{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+   padding:10px;
+}
+.headbord{
+	padding-top:30px;
+    padding-bottom: 10px; 
+
+}
+.detailll{
+  word-break: break-all;
+	 padding-top: 10px;
+   padding-bottom: 10px;
+	
+}
+.vieww{
+	
+  padding: 2px;
+   
+}
+.preparedd {
+     
+	
+   padding: 2px;
+}
+.preparedd button{
+    
+    color: #fff;
+}
+.receivedd{
+     padding-top: 10px;
+     padding-bottom: 8px;
+	 border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.receivedd button{
+	color: #fff;
+   background: #23b41d;
+}
+.cancell{
+     padding-top: 10px;
+     padding-bottom: 8px;
+	 border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.cancell button{
+	color: #fff;
+	background: #e10000;
+}
+.onholdd{
+     padding-top: 10px;
+     padding-bottom: 8px;
+	 border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.onholdd button{
+	color: #fff;
+    background: #e14f00;
+}
+
+
+@media screen and (min-width:250px) and (max-width:768px){
+  .rightooo{
+  	margin-top: 10px;
+  }
+}
+@media screen and (min-width:250px) and (max-width:768px){
+  .mainnnn{
+  	overflow-x:scroll; 
+  }
+  .maindetail{
+  	width:800px;
+  }
+  .headbord{
+  	width:130px;
+  }
+  .detailll{
+  	width:130px;
+  }
+  .preparedd{
+  	width: 130px;
+  }
+  .vieww{
+    width: 130px;
+  }
+  .cancell{
+  	width: 130px;
+  }
+  .onholdd{
+  	width: 130px;
+  }
+  .received{
+  	width: 130px;
+  }
+}

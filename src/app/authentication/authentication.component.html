@@ -1,0 +1,15 @@
+ <div class="background_images">
+
+<div class="container" style="position: relative;">
+  <div class="row" style="margin-top:7vh">
+    <div class="col s12 white-text text-darken-4 center-align ">
+      <img class="responsive-img" src="../assets/img/HookahRoyals.png">
+    </div>
+<a [routerLink]="['/authentication',{outlets:{login:['login']}}]"> Login </a>
+<a [routerLink]="['/authentication',{outlets:{signup:['signup']}}]"> signup </a>
+<router-outlet name="login"></router-outlet>
+<router-outlet name="signup"></router-outlet>
+
+  </div>
+</div>
+</div>
